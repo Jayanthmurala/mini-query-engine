@@ -12,6 +12,9 @@ app.use(bodyParser.json());
 
 // Use our routes under /api
 app.use("/api", routes);
+app.use("/", (req, res) => {
+  res.send("Welcome to the Mini Query Engine API! Use /api/login to get a token.");
+}
 
 // Start the server
 app.listen(PORT, () => {

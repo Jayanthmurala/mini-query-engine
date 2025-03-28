@@ -4,7 +4,7 @@ const queryEngine = require("./logic");
 const logic = require("./logic");
 const dotEnv = require("dotenv");
 
-dotenv.config();
+dotEnv.config();
 
 const router = express.Router();
 const SECRET_KEY = process.env.SECRET_KEY;

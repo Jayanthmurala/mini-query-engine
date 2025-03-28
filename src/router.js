@@ -2,9 +2,12 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const queryEngine = require("./logic");
 const logic = require("./logic");
+const dotEnv = require("dotenv");
+
+dotenv.config();
 
 const router = express.Router();
-const SECRET_KEY = "GrowthGear";
+const SECRET_KEY = process.env.SECRET_KEY;
 
 // Middleware to check if the user is logged in
 const authenticate = (req, res, next) => {
